@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tamentis Calculator</string>
+
+    <string name="textview">James is making it happen!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button">Calculate the average</string>
+    <string name="hint">A URL</string>
+    <string name="defaultURL">http://tamentis.com/tmp/truveris/dc_acs_2009_5yr_g00__data1.txt</string>
+</resources>

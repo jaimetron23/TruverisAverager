@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\James\Desktop\OMGAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\James\Desktop\OMGAndroid\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-f703bc1653c81a3bd1a25a2ba36e96177ac09c45.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\OMGAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\James\Desktop\OMGAndroid\app\build\intermediates\pre-dexed\debug\classes-a1acb90206dc1e93e752e8ad60d12afc3a1a1009.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\TruverisAverager\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\James\Desktop\TruverisAverager\app\build\intermediates\pre-dexed\debug\classes-066f094d667e07d667ccd157f388e180ff1c646d.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\OMGAndroid2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\James\Desktop\OMGAndroid2\app\build\intermediates\pre-dexed\debug\classes-9161327155590dd7e4e8a08ff6195f5ae4c78da6.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\OMGAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\James\Desktop\OMGAndroid\app\build\intermediates\pre-dexed\debug\classes-fecec8fa203fd57657c3189566e320c3f01eb4ea.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\James\Desktop\OMGAndroid\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-625b45950f4aeeba748583d7ba8af8c0a67a24e2.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\TruverisAverager\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\James\Desktop\TruverisAverager\app\build\intermediates\pre-dexed\debug\classes-2a0a6292639069d4fe65c708ac4104e29c4ca275.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\OMGAndroid2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\James\Desktop\OMGAndroid2\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-6d81b1592fec8baf754b826954f565748ebf5748.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\TruverisAverager\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\James\Desktop\TruverisAverager\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-0ea733fdc74585c04f40b589b4f4114cb40d0d15.jar" />
+    </item>
+    <item
+        jar="C:\Users\James\Desktop\OMGAndroid2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\James\Desktop\OMGAndroid2\app\build\intermediates\pre-dexed\debug\classes-d79161656274f5cedd06b622c0dee976dd746772.jar" />
+    </item>
+
+</items>
