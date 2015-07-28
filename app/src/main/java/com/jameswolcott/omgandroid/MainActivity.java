@@ -68,7 +68,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             HttpURLConnection destination = testRedirect(url);
             System.err.println("finished redirect");
             BRRead file = new BRRead(destination);
-
+            //run parse
             double end = file.OpenFile();
             result = Double.toString(Math.round(end * 100.0) / 100.0);
 
