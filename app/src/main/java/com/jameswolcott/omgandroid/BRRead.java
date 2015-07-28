@@ -10,27 +10,18 @@ import java.net.URL;
  * Created by James on 7/26/2015.
  */
 public class BRRead {
-//    private URL path;
     private URL path;
     private static final int OFFSET = 2;
-    private static final int COLUMNMOD = 253; //*Tamantis 506*//
-    int dirtyNum = 0;
-
-
-//    DefaultHttpClient httpclient = new DefaultHttpClient();
+    private static final int COLUMNMOD = 253;
+    private int emptyNum = 0;
 
     public BRRead(HttpURLConnection filePath) {
-
         path = filePath.getURL();
     }
 
     public double OpenFile() throws IOException {
-//        BufferedReader r = new BufferedReader(new InputStreamReader(is));
-
-//        FileReader fr = new FileReader(path);
         InputStreamReader fr = new InputStreamReader(path.openStream());
         BufferedReader textReader = new BufferedReader(fr);
-//        BufferedReader textReader = new BufferedReader(new InputStreamReader(is));
 
         int count = 0;
         int numLines = readLines();
@@ -40,6 +31,7 @@ public class BRRead {
 
         for (int i = 0; i < numLines; i++) {
             eachLine[i] = textReader.readLine();
+            //regEx to check for spaces and column divider text
             String pattern = "(\\s*)([\\|])";
             String plusPattern = "(\\s*)";
             String[] textData = eachLine[i].split(pattern + plusPattern);
@@ -51,7 +43,6 @@ public class BRRead {
             count++;
         }
         textReader.close();
-
         collectAndParse(lastColumnString, lastColumn);
        return sumAndAverager(numLines, lastColumn);
     }
@@ -75,24 +66,18 @@ public class BRRead {
         double sum = 0;
         for (int l = OFFSET; l < lastColumn.length; l++) {
             if (lastColumn[l] < 0) {
-                dirtyNum++;
+                emptyNum++;
             } else {
                 sum = lastColumn[l] + sum;
             }
         }
 
-        double average = sum / (numLines - (OFFSET + dirtyNum));
-        System.out.println("numlines = " + (numLines - (OFFSET + dirtyNum)));
-        System.out.println("dirtyNum = " + dirtyNum);
-        System.out.println("________________________________________________");
-        System.out.println(average);
+        double average = sum / (numLines - (OFFSET + emptyNum));
+        System.out.println("numlines = " + (numLines - (OFFSET + emptyNum)));
         return average;
     }
 
     protected int readLines() throws IOException {
-
-
-//        FileReader fileToRead = new FileReader(path);
         InputStreamReader fileToRead = new InputStreamReader(path.openStream());
         BufferedReader bf = new BufferedReader(fileToRead);
         String aLine;

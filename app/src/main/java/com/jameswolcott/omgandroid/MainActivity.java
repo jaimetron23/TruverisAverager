@@ -19,17 +19,14 @@ import java.net.URL;
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     TextView mainTextView;
-
     Button mainButton;
     EditText mainEditText;
-
-    URL url;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //Open permissions on StrictMode.ThreadPolicy
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -43,53 +40,37 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         mainButton = (Button) findViewById(R.id.main_button);
         mainButton.setOnClickListener(this);
 
+        //Set default text to EditText
         mainEditText = (EditText) findViewById(R.id.main_edittext);
         mainEditText.setText("http://tamentis.com/tmp/truveris/dc_acs_2009_5yr_g00__data1.txt");
-//        mainEditText.setText("http://tamentis.com/tmp/truveris/dc_acs_2009_5yr_g00__data1.txt");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         // Inflate the menu.
-        // Adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public void onClick(View v) {
-//        String urlToTest = "http://tamentis.com/tmp/truveris/dc_acs_2009_5yr_g00__data1.txt";
         Editable newText = mainEditText.getText();
         String urlToTest = newText.toString();
-        String average = "";
-       average = runAverage(urlToTest);
-        String post = "Resulting Average is : ";
-        mainTextView.setText(post + average);
+        String average = runAverage(urlToTest);
+        mainTextView.setText("Resulting Average is: " + average);
     }
-
-    public String urlToTest (String url) {
-        String finalUrl = url;
-        return finalUrl;
-    }
-
 
     public String runAverage(String urlToTest) {
         String result = "";
         try {
-            // Create a URL for the desired page
-            URL url = new URL (urlToTest);
-
+            // Create a URL for the desired page and test
+            URL url = new URL(urlToTest);
             HttpURLConnection destination = testRedirect(url);
             System.err.println("finished redirect");
             BRRead file = new BRRead(destination);
 
             double end = file.OpenFile();
-            double newEnd = Math.round(end*100.0)/100.0;
-
-            result = Double.toString(newEnd);
-
-            System.err.println("AVERAGE IS " + result);
+            result = Double.toString(Math.round(end * 100.0) / 100.0);
 
         } catch (MalformedURLException e) {
             result = "Malformed Exception";
@@ -122,7 +103,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
 
         if (redirect) {
-
             // get redirect url from "location" header field
             String newUrl = conn.getHeaderField("Location");
 
@@ -135,13 +115,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             conn.addRequestProperty("Accept-Language", "en-US,en;q=0.8");
             conn.addRequestProperty("User-Agent", "Mozilla");
             conn.addRequestProperty("Referer", "google.com");
-
             System.out.println("Redirect to URL : " + newUrl);
-
         }
         return conn;
     }
-
-
-
 }
